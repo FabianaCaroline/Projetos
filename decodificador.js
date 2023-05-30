@@ -8,6 +8,7 @@ let chaves = {
 
 let textarea = document.querySelector('#campo-busca');
 let btnCriptografar = document.querySelector('.btn-criptografar');
+let btnDescriptografar = document.querySelector('.btn-descriptografar');
 let campoResultado = document.querySelector('.campo-resultado');
 let btnCopiar = document.querySelector('.campo-resultado .botao');
 let placeholderResultado = document.querySelector('.placeholder-resultado');
@@ -18,6 +19,7 @@ let palavra = "";
 
 btnCriptografar.onclick = function (event){
     texto = textarea.value;
+    palavra = "";
 
     if (texto) {
         for (let i = 0; i < texto.length; i++) {
@@ -32,6 +34,26 @@ btnCriptografar.onclick = function (event){
         placeholderResultado.style.display = 'none';
         campoResultado.style = 'display: flex;' + 'flex-direction: column;' + 'justify-content: space-between;';
         resultado.textContent = palavra;
+        btnCopiar.style.display = 'inline-block';
+
+    } else{
+        placeholderResultado.style.display = 'block';
+    }
+
+};
+
+btnDescriptografar.onclick = function (event){
+    texto = textarea.value;
+
+    if (texto) {
+
+        for (const i in chaves) {
+            texto = texto.replaceAll(chaves[i], i);
+        }
+            
+        placeholderResultado.style.display = 'none';
+        campoResultado.style = 'display: flex;' + 'flex-direction: column;' + 'justify-content: space-between;';
+        resultado.textContent = texto;
         btnCopiar.style.display = 'inline-block';
 
     } else{
