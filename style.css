@@ -40,15 +40,40 @@ body > img {
     align-items: center;
     justify-content: center;
 }
+.botao{
+    padding: 24px;
+    width: 320px;
+    background: none;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #0A3871;
+}
 
 .campo-busca > textarea {
     border: hidden;
     background: none;
-    height: 100%;
     width: 100%;
     resize: none;
 }
-.campo-busca > div
+
+.campo-busca > div > button{
+    margin-right: 24px;
+}
+.campo-busca > div > p{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #495057;
+    
+    margin-bottom: 16px;
+}
 
 .campo-busca > textarea::placeholder {
     font-family: 'Inter';
