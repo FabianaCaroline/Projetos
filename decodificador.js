@@ -17,7 +17,7 @@ let resultado = document.querySelector('.texto-resultado');
 let texto = "";
 let palavra = "";
 
-btnCriptografar.onclick = function (event){
+btnCriptografar.onclick = function (){
     texto = textarea.value;
     palavra = "";
 
@@ -42,7 +42,7 @@ btnCriptografar.onclick = function (event){
 
 };
 
-btnDescriptografar.onclick = function (event){
+btnDescriptografar.onclick = function (){
     texto = textarea.value;
 
     if (texto) {
@@ -61,3 +61,12 @@ btnDescriptografar.onclick = function (event){
     }
 
 };
+
+btnCopiar.onclick = function () {
+    navigator.clipboard.writeText(resultado.textContent).then(() => {
+        /* clipboard successfully set */
+      }, () => {
+        console.log("Erro de gravação na área de transferência");
+      });
+
+}
