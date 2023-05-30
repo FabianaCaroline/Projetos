@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
         <title>Decodificador</title>
     </head>
     <body>
@@ -15,9 +16,12 @@
             <section class="campo-busca">
                 <textarea name="campo-busca" id="campo-busca" placeholder="Digite seu texto"></textarea>
                 <div>
-                    <p>Apenas letras minúsculas e sem acento.</p>
+                    <div class="aviso-caracteres">
+                        <img src="./assets/exclamation.svg" alt="Insira apenas letras minúsculas e sem acento">
+                        <p>Apenas letras minúsculas e sem acento.</p>
+                    </div>
                     <button class="btn-criptografar botao">Criptografar</button>
-                    <button class="botao">Descriptografar</button>
+                    <button class="btn-descriptografar botao">Descriptografar</button>
                 </div>
             </section>
             <section class="campo-resultado">
