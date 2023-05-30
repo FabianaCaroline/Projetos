@@ -32,12 +32,15 @@ btnCriptografar.onclick = function (){
         }
             
         placeholderResultado.style.display = 'none';
-        campoResultado.style = 'display: flex;' + 'flex-direction: column;' + 'justify-content: space-between;';
+        resultado.style.display = 'block'
+        campoResultado.style = 'display: flex;' + 'flex-direction: column;' + 'justify-content: center;';
         resultado.textContent = palavra;
         btnCopiar.style.display = 'inline-block';
 
     } else{
         placeholderResultado.style.display = 'block';
+        resultado.style.display = 'none';
+        btnCopiar.style.display = 'none';
     }
 
 };
@@ -52,19 +55,22 @@ btnDescriptografar.onclick = function (){
         }
             
         placeholderResultado.style.display = 'none';
-        campoResultado.style = 'display: flex;' + 'flex-direction: column;' + 'justify-content: space-between;';
+        resultado.style.display = 'block'
+        campoResultado.style = 'display: flex;' + 'flex-direction: column;' + 'justify-content: center;';
         resultado.textContent = texto;
         btnCopiar.style.display = 'inline-block';
 
     } else{
         placeholderResultado.style.display = 'block';
+        resultado.style.display = 'none';
+        btnCopiar.style.display = 'none';
     }
 
 };
 
 btnCopiar.onclick = function () {
     navigator.clipboard.writeText(resultado.textContent).then(() => {
-        /* clipboard successfully set */
+        resultado.textContent = "Nenhuma mensagem";
       }, () => {
         console.log("Erro de gravação na área de transferência");
       });

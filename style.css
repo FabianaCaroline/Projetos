@@ -80,6 +80,8 @@ body > img {
     color: #495057;
 
     word-wrap: break-word;
+
+    display: none;
 }
 
 .campo-busca .btn-criptografar{
