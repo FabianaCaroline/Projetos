@@ -133,7 +133,7 @@ body > img {
     align-self: flex-end;
 }
 
-.campo-busca > div > button{
+.campo-busca .botao{
     margin-right: 24px;
 }
 .aviso-caracteres > img{

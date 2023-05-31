@@ -1,0 +1,58 @@
+@media screen and (max-width: 768px) {
+    *{
+        box-sizing: content-box;
+    }
+    body{
+        max-width: 100vw;
+        padding: 40px;
+    }
+    main {
+        margin: 0;
+        display: block;
+    }
+
+    body > img {
+        width: 31px;
+        height: 46px;
+        top: 73px;
+        left: 40px;
+    }
+
+    .campo-busca{
+        margin: 128px 0 32px 0;
+        justify-content: space-between;
+    }
+    .botoes-busca{
+        display: flex;
+    }
+    .campo-resultado{
+        width: auto;
+        margin: 64px 0 40px 0;
+    }
+    
+
+    .campo-busca > textarea {
+        height: 596px;
+    }
+    .campo-busca > div {
+        align-self: normal;
+    }
+
+    .placeholder-resultado img{
+        display: none;
+    }
+    .campo-resultado h2 {
+        margin: 0px 0 16px 0;
+    }
+    
+
+    .campo-busca .botao{
+        margin: 0;
+    }
+    .campo-busca .btn-criptografar {
+        margin-right: 24px;
+    }
+    .campo-resultado .botao{
+        margin-top: 32px;
+    }
+}
